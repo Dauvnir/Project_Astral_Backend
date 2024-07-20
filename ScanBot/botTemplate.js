@@ -48,10 +48,9 @@ const fetchData = async (page, choosedWebsite) => {
 				console.error("Wrong website provided:", choosedWebsite);
 				break;
 		}
-
+		tryca;
 		await page.goto(website, {
 			waitUntil: ["networkidle2", "load"],
-			timeout: 60000,
 		});
 
 		if (choosedWebsite === "Reaper") {
