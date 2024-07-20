@@ -196,7 +196,7 @@ const scrapManhwaDataBasedOnWebsite = async (page, choosedWebsite) => {
 async function scrapData(choosedWebsite, encode) {
 	await checkInternetConnection();
 	const browser = await puppeteer.launch({
-		headless: false,
+		headless: true,
 	});
 	const page = await browser.newPage();
 	await page.setViewport({ width: 800, height: 600 });
