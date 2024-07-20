@@ -1,5 +1,5 @@
-const scrapData = require("../ScanBot/ScanBot/botTemplate.js");
-const base64Encoder = require("../ScanBot/ScanBot/base64Encoder.js");
+const scrapData = require("../ScanBot/botTemplate.js");
+const base64Encoder = require("../ScanBot/base64Encoder.js");
 const pool = require("../db.js");
 //GET all manhwa list with searching
 const getAllManhwa = async (req, res) => {
