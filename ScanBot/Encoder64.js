@@ -1,7 +1,13 @@
 const encoder64 = async (page) => {
 	const base = await page.evaluate(async () => {
 		let src = document.querySelector("img")?.getAttribute("src");
-		if (src === undefined) {
+		if (
+			src === undefined ||
+			src === "" ||
+			typeof src === "object" ||
+			src === null ||
+			Array.isArray(src)
+		) {
 			return;
 		}
 		const parseToURIFormat = async (blobObject) => {
