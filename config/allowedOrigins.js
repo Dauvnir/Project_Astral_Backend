@@ -1,3 +1,3 @@
-const whitelist = ["http://localhost:3500", "http://localhost:5173"];
+const whitelist = ["https://project-astral.onrender.com"];
 
 module.exports = whitelist;
