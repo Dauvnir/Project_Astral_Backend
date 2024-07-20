@@ -1,8 +1,5 @@
 require("dotenv").config;
 
-const whitelist = [
-	"https://project-astral.onrender.com",
-	process.env.DATABASE_URI,
-];
+const whitelist = ["https://project-astral.onrender.com"];
 
 module.exports = whitelist;
