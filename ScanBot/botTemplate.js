@@ -50,6 +50,7 @@ const fetchData = async (page, choosedWebsite) => {
 		}
 		await page.goto(website, {
 			waitUntil: ["networkidle2", "load"],
+			timeout: 0,
 		});
 
 		if (choosedWebsite === "Reaper") {
