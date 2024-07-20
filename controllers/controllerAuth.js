@@ -57,6 +57,7 @@ const handleLogin = async (req, res) => {
 				httpOnly: true,
 				sameSite: "None",
 				secure: true,
+				partitioned: true,
 				maxAge: 24 * 60 * 60 * 1000, // one day only
 			});
 			res.json({ accessToken });
