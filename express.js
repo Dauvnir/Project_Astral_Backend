@@ -66,8 +66,8 @@ async function updateDB() {
 		throw error;
 	}
 }
-//
-// updateDB();
+
+updateDB();
 app.use(errorHandler);
 
 process.on("exit", () => {
