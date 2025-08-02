@@ -7,7 +7,7 @@ const path = require("path");
 const corsOptions = require("./config/corsOptions");
 const credentials = require("./middleware/credentials");
 const PORT = process.env.PORT || 3500;
-const manhwaController = require("./controllers/controllerScanBot");
+// const manhwaController = require("./controllers/controllerScanBot");
 const { logger } = require("./middleware/logEvents");
 const errorHandler = require("./middleware/errorHandler");
 const verifyJWT = require("./middleware/verifyJWT");
@@ -56,18 +56,18 @@ app.use("/library", require("./routes/library"));
 app.use("/users", require("./routes/usersCRUD"));
 
 // update database every 2 hours
-setInterval(updateDB, 7200000); //7 200 000  it is 2 hour
-async function updateDB() {
-	try {
-		await manhwaController.patchManhwaChapterAll();
-		console.log("Database updated successfully.");
-	} catch (error) {
-		console.error("Error while updating database", error);
-		throw error;
-	}
-}
+// setInterval(updateDB, 7200000);
+// async function updateDB() {
+// 	try {
+// 		await manhwaController.patchManhwaChapterAll();
+// 		console.log("Database updated successfully.");
+// 	} catch (error) {
+// 		console.error("Error while updating database", error);
+// 		throw error;
+// 	}
+// }
 
-updateDB();
+// updateDB();
 app.use(errorHandler);
 
 process.on("exit", () => {
